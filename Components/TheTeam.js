@@ -41,36 +41,6 @@ const TheTeam = () => {
               <a>@Falsecrackzz</a>
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center text-2xl hover:translate-y-2 duration-300">
-            <h1 className="mb-3 cursor-pointer">Community Manager</h1>
-            <div className=" rounded-full w-64 h-64 flex justify-center items-center ">
-              <a
-                target="_blank"
-                href="https://twitter.com/Bai_licious"
-                rel="noopener noreferrer"
-              >
-                <Image alt="" src={nft2} className="rounded-full" />
-              </a>
-            </div>
-            <p className="mt-3 cursor-pointer">
-              <a>@Bai_licious</a>
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center text-2xl hover:translate-y-2 duration-300">
-            <h1 className="mb-3 cursor-pointer">Community Manager</h1>
-            <div className=" rounded-full w-64 h-64 flex justify-center items-center">
-              <a
-                target="_blank"
-                href="https://twitter.com/0x_Wu"
-                rel="noopener noreferrer"
-              >
-                <Image alt="" src={nft3} className="rounded-full" />
-              </a>
-            </div>
-            <p className="mt-3 cursor-pointer">
-              <a>@0x_Wu</a>
-            </p>
-          </div>
         </div>
       </div>
     </div>
