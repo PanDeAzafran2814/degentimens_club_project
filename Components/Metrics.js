@@ -22,14 +22,6 @@ const Metrics = () => {
               <FontAwesomeIcon className="w-32 h-32" icon={faDiscord} />
             </a>
           </div>
-          <div className="flex mb-10 justify-center text-4xl">
-            <h1>1.4k</h1>
-          </div>
-          <div className="flex neontextyellow justify-center text-center text-4xl">
-            <h6>
-              Discord <br /> Members
-            </h6>
-          </div>
         </div>
 
         <div className="lg:w-3/12 py-24 flex flex-col justify-center">
@@ -41,14 +33,6 @@ const Metrics = () => {
             >
               <FontAwesomeIcon className="w-32 h-32" icon={faTwitter} />
             </a>
-          </div>
-          <div className="flex mb-10 justify-center text-4xl">
-            <h1>5.5k</h1>
-          </div>
-          <div className="flex neontextyellow justify-center text-center text-4xl">
-            <h6>
-              Twitter <br /> Followers
-            </h6>
           </div>
         </div>
       </div>
