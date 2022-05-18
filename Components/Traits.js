@@ -15,9 +15,9 @@ const Traits = () => {
                 <h1>Traits</h1>
                 <hr className="w-5/12 in:hidden lineneonblue"></hr>
             </div>
-            <div className="flex mx-16 w-full">
-                <div className="w-1/2">
-                    <ul className="space-y-8 px-6 uppercase text-lg font-bold">
+            <div className="flex mx-16 xlmin:mx-0 w-full xlmin:flex-col">
+                <div className="w-1/2 xlmin:w-full">
+                    <ul className="space-y-8 px-6 xlmin:px-1 uppercase text-lg font-bold">
                         <li 
                             className="traisbuton hover:-translate-y-6"
                             onClick={(e)=>{SetSwipe("Background")}}
@@ -80,7 +80,7 @@ const Traits = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="w-1/2 ">
+                <div className="w-1/2 xlmin:w-full xlmin:mt-8">
                     <Image src={
                         Swipe !== ""?
                         ImageNft

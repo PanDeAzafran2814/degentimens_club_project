@@ -48,15 +48,6 @@ const Nav = () => {
             />
           </a>
         </div>
-        <div className="p-2 mr-2 rounded-full text-Containers-0  flex justify-center items-center">
-          <a
-            target="_blank"
-            href="https://raritysniper.com/"
-            rel="noopener noreferrer"
-          >
-            <Image src={rarity} width={20} height={20} />
-          </a>
-        </div>
       </div>
 
       <nav className="in:hidden flex justify-center items-center text-xl pb-2">

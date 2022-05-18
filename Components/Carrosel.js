@@ -10,12 +10,21 @@ import nft1 from "../assets/images/Falsecrackzz.png";
 import nft2 from "../assets/images/Bai.png";
 import nft3 from "../assets/images/Wu.png";
 import Image from "next/image";
+import { useMediaQuery } from 'react-responsive';
+
 
 const Carrosel = ({away}) => {
+    const isMobile = useMediaQuery({ query: `(max-width: 1024px)` });
+    console.log(isMobile)
     return ( 
         <div className="neondiv px-3 text-white md:flex md:rounded-lg lg:mb-5 pt-8 pr-2 pinkgradientBackground pb-8 xl:ml-52 xl:mr-52 xlmin:ml-0 xlmin:mr-0 border-t-2 border-t-Containers-10 border-b-2 border-b-Containers-10">
         <Swiper
-        slidesPerView={5}
+        slidesPerView={
+            isMobile?
+            2
+            :
+            5
+        }
         spaceBetween={30}
         loop={true}
         pagination={{
