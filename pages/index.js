@@ -12,6 +12,8 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Welcome from "../Components/Welcome";
 import Metrics from "../Components/Metrics";
+import Carrosel from "../Components/Carrosel";
+import Traits from "../Components/Traits";
 
 const Index = () => {
   useEffect(() => {
@@ -30,12 +32,12 @@ const Index = () => {
       <div className="h-36 mdmax:h-24"></div>
       <div className="p-4 space-y-2">
         <ImageBar />
-
+        <Carrosel away={false}/>
         <About />
-        <RoadMap />
-        <Mint />
-        <Faq />
+        <Traits/>
+        <Carrosel away={true}/>
         <TheTeam />
+        <Faq />
         <Metrics />
       </div>
 

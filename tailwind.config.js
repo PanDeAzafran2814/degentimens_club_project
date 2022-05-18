@@ -14,6 +14,7 @@ module.exports = {
         'lgmm' : {'min':'850px'}
       },
       colors:{
+        'BlurBlack': 'rgba(0, 0, 0, 0.342)',
         Navbar:{
           0:"#FBF8F1",
           10:"#F9B208",
@@ -33,6 +34,9 @@ module.exports = {
           1:"#3a677e",
           2:"#006d5b",
           3:"#a9a9a9"
+        },
+        ContainersColors:{
+          1:'#d1f8ff',
         }
       },
       spacing: {
