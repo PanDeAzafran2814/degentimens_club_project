@@ -24,14 +24,6 @@ const Faq = () => {
           />
         </div>
         <div className="mb-5">
-          <AccordionFaq
-            title={"What can you promise us?"}
-            content={
-              "- The only thing we can promise our holders is a unique NFT, and access to the 'VIP section', with an exclusive holders-only chat where everyone has a say in where we take this project. We won’t give any false promises. We have plans to build and will let the community decide what we do next. "
-            }
-          />
-        </div>
-        <div className="mb-5">
           <AccordionFaq title={"When launch?"} content={"-March 20, 2022."} />
         </div>
         <div className="mb-5">
@@ -42,14 +34,6 @@ const Faq = () => {
             title={"Is there a WL?"}
             content={
               "- There are 500 spots reserved for WL. The remaining will be for public sale."
-            }
-          />
-        </div>
-        <div className="mb-5">
-          <AccordionFaq
-            title={"How many can I mint for WL?"}
-            content={
-              "- You will be able to mint 5 during presale, more details will be out soon."
             }
           />
         </div>
