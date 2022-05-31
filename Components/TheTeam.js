@@ -9,6 +9,7 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import woodsing from '../assets/images/woodensign2.png';
 
 //data-aos="fade-up"
 const TheTeam = () => {
@@ -16,11 +17,16 @@ const TheTeam = () => {
     <div
       id="team"
       data-aos="fade-up"
-      className="neondiv text-white lg:rounded-lg lg:mb-5 pt-8 pr-2 pinkgradientBackground pb-8 xl:ml-52 xl:mr-52 xlmin:ml-0 xlmin:mr-0 border-t-2 border-t-Containers-10 border-b-2 border-b-Containers-10"
+      className="text-white lg:rounded-lg lg:mb-5 pt-8 pr-2 pinkgradientBackground pb-8 xl:ml-52 xl:mr-52 xlmin:ml-0 xlmin:mr-0 border-t-2"
     >
       <div className="text-center flex justify-evenly items-center neontextyellow text-3xl mb-10">
         <hr className="w-5/12 in:hidden lineneonblue"></hr>
-        <h1>MEET THE TEAM</h1>
+        <div className="relative w-2/12 h-16 flex justify-center items-center py-16 xlmin:w-full">
+                    <div className="absolute">
+                        <Image width={150} height={190} objectFit='cover' className='mx-2' src={woodsing}/>
+                    </div>
+                    <h1 className=" absolute text-xl ">Team</h1>
+                </div>
         <hr className="w-5/12 in:hidden lineneonblue"></hr>
       </div>
 

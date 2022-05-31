@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Metrics = () => {
   return (
-    <div className="mb-10 neondiv text-white md:rounded-lg md:mb-5 pt-8 pr-2 pinkgradientBackground pb-8 xl:ml-52 xl:mr-52 xlmin:ml-0 xlmin:mr-0 border-t-2 border-t-Containers-10 border-b-2 border-b-Containers-10">
+    <div className="mb-10 text-white md:rounded-lg md:mb-5 pt-8 pr-2 pinkgradientBackground pb-8 xl:ml-52 xl:mr-52 xlmin:ml-0 xlmin:mr-0 border-t-2">
       <div className="text-cente flex justify-evenly items-center neontextyellowr text-5xl mb-5">
         <hr className="w-3/12 in:hidden lineneonpink"></hr>
         <h1 className="neontextyellow text-center mx-2">
