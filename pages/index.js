@@ -36,6 +36,7 @@ const Index = () => {
         <About />
         <Traits/>
         <Carrosel away={true}/>
+        <Mint/>
         <TheTeam />
         <Faq />
         <Metrics />

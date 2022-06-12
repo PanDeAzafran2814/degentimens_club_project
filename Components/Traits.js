@@ -16,7 +16,7 @@ const Traits = () => {
                     <div className="absolute">
                         <Image width={150} height={190} objectFit='cover' className='mx-2' src={woodsing}/>
                     </div>
-                    <h1 className=" absolute text-xl ">Traits</h1>
+                    <h1 className=" absolute text-4xl text-black">Traits</h1>
                 </div>
                 <hr className="w-5/12 in:hidden lineneonblue"></hr>
             </div>
