@@ -50,11 +50,11 @@ export const connect = () => {
             method: "net_version",
           })
           .then((networkId) => {
-            if (Number(networkId) === 4) {
+            if (Number(networkId) === 1) {
               console.log("first");
               const SmartContractObj = new Web3EthContract(
                 SmartContract,
-                "0xE4576C806f5D39D460f70c7a63b1A1FbDE8eafF3"
+                "0x08b1AAef9fD158BbDF21C3Cad6408aFA7D35DF4c"
               );
 
               dispatch(

@@ -33,7 +33,7 @@ const Index = () => {
       <div className="p-4 space-y-2">
         <ImageBar />
         <Carrosel away={false}/>
-        <About />
+        {/* <About /> */}
         <Traits/>
         <Carrosel away={true}/>
         <Mint/>

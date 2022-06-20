@@ -10,7 +10,7 @@ import { connect } from "../redux/blockchain/blockchainActions";
 import { fetchData } from "../redux/data/dataActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import woodsing from '../assets/images/woodensign2.png';
+import woodsing from "../assets/images/woodensign2.png";
 
 const Mint = () => {
   const dispatch = useDispatch();
@@ -19,23 +19,19 @@ const Mint = () => {
   const [mintValue, SetMintValue] = useState(1);
   const [feedback, setFeedback] = useState("Maybe it's your lucky day.");
   const [claimingNft, setClaimingNft] = useState(false);
-  const claimNFTs = (_amount, cost) => {
-    console.log("first");
-    if (_amount <= 0) {
+  const claimNFTs = () => {
+    if (mintValue <= 0) {
       return;
     }
     setFeedback("Minting your Ethclusive NFT...");
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(_amount)
+      .mint(mintValue)
       .send({
-        gasLimit: `${200000 * mintValue}`,
-        to: "0xE4576C806f5D39D460f70c7a63b1A1FbDE8eafF3",
+        gasLimit: `${160000 * mintValue}`,
+        to: "0x08b1AAef9fD158BbDF21C3Cad6408aFA7D35DF4c",
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei(
-          (cost * _amount).toString(),
-          "ether"
-        ),
+        value: 0,
       })
       .once("error", (err) => {
         console.log(err);
@@ -67,11 +63,17 @@ const Mint = () => {
       <div className="text-center flex justify-evenly items-center neontextyellow text-3xl mb-10">
         <hr className="w-5/12 in:hidden lineneonblue"></hr>
         <div className="relative w-2/12 h-16 flex justify-center items-center py-16 xlmin:w-full">
-                    <div className="absolute">
-                        <Image width={150} height={190} objectFit='cover' className='mx-2' src={woodsing}/>
-                    </div>
-                    <h1 className=" absolute text-black text-4xl">Mint</h1>
-                </div>
+          <div className="absolute">
+            <Image
+              width={150}
+              height={190}
+              objectFit="cover"
+              className="mx-2"
+              src={woodsing}
+            />
+          </div>
+          <h1 className=" absolute text-black text-4xl">Mint</h1>
+        </div>
         <hr className="w-5/12 in:hidden lineneonblue"></hr>
       </div>
       <div className="ni:flex">
@@ -90,15 +92,11 @@ const Mint = () => {
 
           <div className="h-1/2">
             <div className="flex justify-between ni:text-2xl mt-5">
-              <input
-                className="bg-transparent w-full"
-                placeholder="0.06 ETH"
-                type="number"
-              />
+             First 2000 free, the rest 0.0069 ETH.
             </div>
             <div className="flex justify-between border-t-2 border-b-2 border-white my-5 py-2 ni:text-2xl text-gray-600">
               <h1>TOTAL</h1>
-              <h1>0.06 ETH</h1>
+              <h1>0.00 ETH</h1>
             </div>
             <div className="space-y-2">
               <button
@@ -122,17 +120,45 @@ const Mint = () => {
               >
                 MINT
               </button>
-              <div>{blockchain.account}</div>
+              {/* <div>{blockchain.account}</div> */}
+              <select
+                className="MintBtn bg-transparent"
+                onChange={(e) => SetMintValue(Number(e.target.value))}
+                disabled={
+                  blockchain.account === "" || blockchain.smartContract === null
+                }
+              >
+                <option value={0}>Select Mint Amount</option>
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+                <option value={4}>4</option>
+                <option value={5}>5</option>
+                <option value={6}>6</option>
+                 <option value={7}>7</option>
+                 <option value={8}>8</option>
+                 <option value={9}>9</option>
+                 <option value={10}>10</option>
+
+              </select>
               <button
                 className="MintBtn "
-                disabled
                 onClick={(e) => {
-                  e.preventDefault();
-                  dispatch(connect());
-                  getData();
+                  if (
+                    blockchain.account === "" ||
+                    blockchain.smartContract === null
+                  ) {
+                    e.preventDefault();
+                    dispatch(connect());
+                    getData();
+                  } else {
+                    claimNFTs();
+                  }
                 }}
               >
-               Coming soon
+                {blockchain.account === "" || blockchain.smartContract === null
+                  ? "Connect"
+                  : "Mint"}
               </button>
             </div>
           </div>
